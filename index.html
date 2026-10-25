@@ -1,0 +1,30 @@
+<!doctype html>
+<html lang="pt">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="theme-color" content="#0b0b0b">
+<title>NØIIR Distribution Global</title><link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<header class="top"><a class="brand" href="#inicio"><span class="logo">NØ</span><span><b>NØIIR</b><small>DISTRIBUTION GLOBAL</small></span></a><button id="menuBtn" aria-label="Abrir menu">☰</button><nav id="nav"><a href="#inicio">Início</a><a href="#submeter">Submeter música</a><a href="#consultar">Consultar lançamento</a><a href="#admin">Administração</a></nav></header>
+<main>
+<section class="hero" id="inicio"><div><p class="gold tiny">MUSIC DISTRIBUTION WORLDWIDE</p><h1>A tua música.<br><span>O teu mundo.</span></h1><p class="muted">Portal inicial para receber e organizar pedidos de lançamento musical de artistas.</p><a class="btn goldbtn" href="#submeter">Começar submissão</a><p class="warning">Demonstração local: os dados ficam neste dispositivo/navegador. Não são enviados para uma equipa nem para lojas digitais.</p></div><div class="vinyl"><div>NØ</div><p>NØIIR<br>DISTRIBUTION GLOBAL</p></div></section>
+<section class="section" id="submeter"><p class="gold tiny">NOVO LANÇAMENTO</p><h2>Submeter música</h2><p class="muted">Preenche os dados. Podes selecionar um ficheiro de áudio e uma capa para registar os nomes dos ficheiros nesta demonstração. Os ficheiros não são enviados a um servidor.</p>
+<form id="releaseForm" class="panel"><div class="grid">
+<label>Nome artístico *<input name="artist" required maxlength="100" placeholder="Nome do artista"></label>
+<label>Email de contacto *<input name="email" type="email" required maxlength="150" placeholder="email@exemplo.com"></label>
+<label>Título da música *<input name="track" required maxlength="150" placeholder="Título"></label>
+<label>Tipo de lançamento *<select name="kind" required><option value="">Escolher</option><option>Single</option><option>EP</option><option>Álbum</option></select></label>
+<label>Data pretendida<input name="date" type="date"></label>
+<label>País<input name="country" maxlength="80" placeholder="Ex.: Angola"></label>
+<label>Ficheiro de áudio (opcional)<input name="audio" type="file" accept="audio/*"></label>
+<label>Capa (opcional)<input name="cover" type="file" accept="image/*"></label>
+<label class="wide">Plataformas pretendidas<div class="checks"><label><input type="checkbox" name="platform" value="Spotify"> Spotify</label><label><input type="checkbox" name="platform" value="Apple Music"> Apple Music</label><label><input type="checkbox" name="platform" value="YouTube Music"> YouTube Music</label><label><input type="checkbox" name="platform" value="Deezer"> Deezer</label><label><input type="checkbox" name="platform" value="TikTok"> TikTok</label><label><input type="checkbox" name="platform" value="Outras"> Outras</label></div></label>
+<label class="wide">Notas<textarea name="notes" rows="3" maxlength="1000" placeholder="Créditos, produtores ou informações adicionais"></textarea></label>
+</div><label class="consent"><input type="checkbox" required> Confirmo que tenho os direitos ou autorização para submeter esta música e a capa.</label><button class="btn goldbtn" type="submit">Guardar submissão neste dispositivo</button><div id="formMessage" class="message" hidden></div></form>
+</section>
+<section class="section dark" id="consultar"><p class="gold tiny">ACOMPANHAMENTO</p><h2>Consultar lançamento</h2><p class="muted">Usa o código de referência gerado quando guardaste a submissão neste navegador.</p><form id="lookupForm" class="lookup"><input id="lookupCode" required placeholder="Ex.: NOIIR-ABC123"><button class="btn goldbtn">Consultar</button></form><div id="lookupResult" class="message" hidden></div></section>
+<section class="section" id="admin"><p class="gold tiny">GESTÃO LOCAL</p><h2>Painel de demonstração</h2><p class="muted">Mostra os pedidos guardados neste navegador. Não é uma área administrativa protegida e não deve ser usada para dados confidenciais.</p><div class="admin-actions"><button id="refreshAdmin" class="btn outline">Atualizar lista</button><button id="exportBtn" class="btn outline">Exportar lista (JSON)</button><button id="clearBtn" class="btn danger">Apagar dados locais</button></div><div id="adminList" class="release-list"></div></section>
+<section class="section disclaimer"><h2>O que esta versão faz — e não faz</h2><p>Esta versão é um site funcional de demonstração: guarda submissões localmente, cria referências, permite consultar pedidos e exportar dados. Não envia dados à NØIIR por internet, não tem contas de utilizador, base de dados online, pagamentos, royalties nem distribuição automática. Para uma operação real, será necessário um servidor/backend seguro, armazenamento de ficheiros, políticas de privacidade e direitos de autor, e um parceiro de distribuição autorizado ou acordos diretos com as lojas.</p></section>
+</main><footer><span>© <span id="year"></span> NØIIR Distribution Global</span><a href="#inicio">Voltar ao topo ↑</a></footer>
+<script src="app.js"></script>
+</body></html>
